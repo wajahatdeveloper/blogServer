@@ -10,7 +10,7 @@ const app = express();
 const PORT = 8000;
 
 mongoose.connect('mongodb://127.0.0.1:27017/blogify')
-    .then(e => console.log(`MongoDB connected`));
+    .then(() => console.log(`MongoDB connected`));
 
 app.set('view engine', 'ejs')
 app.set('views', path.resolve('./views'))
