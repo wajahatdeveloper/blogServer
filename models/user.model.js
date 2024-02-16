@@ -65,7 +65,8 @@ schema.static(
     if (hashedPassword !== userProvidedHash)
       throw new Error("Incorrect Password!");
 
-    return (token = createTokenForUser(user));
+    const token = createTokenForUser(user)
+    return token;
   }
 );
 
